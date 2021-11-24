@@ -6,5 +6,7 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     @restaurants = Restaurant.all
+    @hotels = Hotel.all
+    @clubs = Club.all
   end
 end

@@ -1,8 +1,30 @@
 <h1><%= @city.name %></h1>
 
-<h2>Restaurants</h2>
+<div class="row">
+  <div class="col-4">
+    <h2>Restaurants</h2>
 
-<% @restaurants.each do |restaurant| %>
-  <h3><%= restaurant.name %></h3>
-  <p><%= restaurant.address %></p>
-<% end %>
+    <% @restaurants.each do |restaurant| %>
+      <h3><%= link_to restaurant.name, city_restaurant_path(restaurant.id) %></h3>
+      <p><%= restaurant.address %></p>
+    <% end %>
+  </div>
+
+  <div class="col-4">
+    <h2>Hotels</h2>
+
+    <% @hotels.each do |hotel| %>
+      <h3><%= hotel.name %></h3>
+      <p><%= hotel.address %></p>
+    <% end %>
+  </div>
+
+  <div class="col-4">
+    <h2>Bars</h2>
+
+    <% @clubs.each do |club| %>
+      <h3><%= club.name %></h3>
+      <p><%= club.address %></p>
+    <% end %>
+  </div>
+</div>
