@@ -36,76 +36,76 @@ Club.create!(name: 'Bar 19.20',
 
 puts 'Creating London restaurants...'
 
-10.times do
+3.times do
   Restaurant.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, London, UK", city_id: 2)
 end
 
 puts 'Creating London hotels'
 
-10.times do
+3.times do
   Hotel.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, London, UK", city_id: 2)
 end
 
 puts 'Creating London bars'
 
-10.times do
+3.times do
   Club.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, London, UK", city_id: 2)
 end
 
 puts 'Creating Barcelona restaurants...'
 
-10.times do
+3.times do
   Restaurant.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Barcelona, Spain",
                      city_id: 3)
 end
 
 puts 'Creating Barcelona hotels'
 
-10.times do
+3.times do
   Hotel.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Barcelona, Spain", city_id: 3)
 end
 
 puts 'Creating Barcelona bars'
 
-10.times do
+3.times do
   Club.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Barcelona, Spain", city_id: 3)
 end
 
 puts 'Creating New York restaurants...'
 
-10.times do
+3.times do
   Restaurant.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, New York, USA",
                      city_id: 4)
 end
 
 puts 'Creating New York hotels'
 
-10.times do
+3.times do
   Hotel.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, New York, USA", city_id: 4)
 end
 
 puts 'Creating New York bars'
 
-10.times do
+3.times do
   Club.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, New York, USA", city_id: 4)
 end
 
 puts 'Creating Los Angeles restaurants...'
 
-10.times do
+3.times do
   Restaurant.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Los Angeles, USA",
                      city_id: 5)
 end
 
 puts 'Creating Los Angeles hotels'
 
-10.times do
+3.times do
   Hotel.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Los Angeles, USA", city_id: 5)
 end
 
 puts 'Creating Los Angeles bars'
 
-10.times do
+3.times do
   Club.create!(name: Faker::Restaurant.name, address: "#{Faker::Address.street_address}, Los Angeles, USA", city_id: 5)
 end
 

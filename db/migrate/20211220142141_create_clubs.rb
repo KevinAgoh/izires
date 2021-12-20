@@ -1,11 +1,11 @@
-class CreateRestaurants < ActiveRecord::Migration[6.0]
+class CreateClubs < ActiveRecord::Migration[6.0]
   def change
-    create_table :restaurants do |t|
+    create_table :clubs do |t|
       t.string :name
       t.string :address
+      t.string :description
       t.time :opening_time
       t.time :closing_time
-      t.string :description
       t.references :city, null: false, foreign_key: true
 
       t.timestamps

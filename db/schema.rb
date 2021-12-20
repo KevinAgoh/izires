@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_000827) do
+ActiveRecord::Schema.define(version: 2021_12_20_142256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,14 +18,11 @@ ActiveRecord::Schema.define(version: 2021_11_19_000827) do
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
-    t.bigint "restaurant_id", null: false
     t.bigint "hotel_id", null: false
     t.bigint "club_id", null: false
+    t.bigint "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "bookable_type", null: false
-    t.bigint "bookable_id", null: false
-    t.index ["bookable_type", "bookable_id"], name: "index_bookings_on_bookable_type_and_bookable_id"
     t.index ["club_id"], name: "index_bookings_on_club_id"
     t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
     t.index ["restaurant_id"], name: "index_bookings_on_restaurant_id"
@@ -33,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_000827) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
+    t.string "string"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,9 +38,9 @@ ActiveRecord::Schema.define(version: 2021_11_19_000827) do
   create_table "clubs", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.date "opening_time"
-    t.date "closing_time"
     t.string "description"
+    t.time "opening_time"
+    t.time "closing_time"
     t.bigint "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,9 +60,9 @@ ActiveRecord::Schema.define(version: 2021_11_19_000827) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "description"
     t.time "opening_time"
     t.time "closing_time"
-    t.string "description"
     t.bigint "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -161,6 +161,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -213,6 +215,7 @@ DEPENDENCIES
   rails (~> 6.0.4, >= 6.0.4.1)
   rspec-rails (>= 5.0.2)
   sass-rails (>= 6)
+  shoulda-matchers (~> 5.0)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

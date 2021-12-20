@@ -2,7 +2,7 @@
   <h1>IZIRES</h1>
   <ul>
   <% @cities.each do |city| %>
-    <li><%= link_to city.name, city_path(city.id) %></li>
+    <div class='city_card my-3'><h2><%= link_to city.name, city_path(city.id) %></h2></div>
   <% end %>
   </ul>
 </div>

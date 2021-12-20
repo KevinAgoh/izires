@@ -1,3 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :bookable, polymorphic: true
+  belongs_to :hotel
+  belongs_to :club
+  belongs_to :restaurant
 end
