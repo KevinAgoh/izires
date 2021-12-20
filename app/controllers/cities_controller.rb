@@ -6,8 +6,8 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     @restaurant = Restaurant.find(params[:id])
-    @restaurants = Restaurant.all
-    @hotels = Hotel.all
-    @clubs = Club.all
+    @restaurants = Restaurant.where(city_id: @city)
+    @hotels = Hotel.where(city_id: @city)
+    @clubs = Club.where(city_id: @city)
   end
 end
