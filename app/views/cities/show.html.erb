@@ -5,7 +5,7 @@
     <h2>Restaurants</h2>
 
     <% @restaurants.each do |restaurant| %>
-      <h3><%= link_to restaurant.name, city_restaurant_path(@city, @restaurant) %></h3>
+      <h3><%= link_to restaurant.name, restaurant %></h3>
     <% end %>
   </div>
 

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :hotels, only: [:show]
     resources :clubs, only: [:show]
   end
+
+  resources :restaurants, only: [:show]
 end
